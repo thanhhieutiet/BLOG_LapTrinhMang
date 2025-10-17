@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Blog Của Híu</title>
+    <link>http://localhost:1313/myblog/categories/programming/</link>
+    <description>Recent content in Programming on Blog Của Híu</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 Sai lầm phổ biến khi học Java mà mình đã mắc phải</title>
+      <link>http://localhost:1313/myblog/blog/5-wrong-errors/</link>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/5-wrong-errors/</guid>
+      <description>&lt;h2 id=&#34;debug-resources&#34;&gt;Debug Resources:&lt;/h2&gt;&#xA;&lt;ul&gt;&#xD;&#xA;  &#xD;&#xA;  &lt;li&gt;Name: thumbnail.png - Type: image&lt;/li&gt;&#xD;&#xA;  &#xD;&#xA;&lt;/ul&gt;&#xD;&#xA;&#xA;&lt;p&gt;Xin chào các bạn! Hôm nay mình muốn chia sẻ về những sai lầm &amp;ldquo;kinh điển&amp;rdquo; mà hầu như ai học Java cũng mắc phải, bao gồm cả mình. Hy vọng qua bài viết này, các bạn newbie sẽ tránh được những &amp;ldquo;hố đen&amp;rdquo; mà mình đã rơi vào.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Design Patterns trong Java vs JavaScript: Cùng bài toán, khác cách giải</title>
+      <link>http://localhost:1313/myblog/blog/design-patterns/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/design-patterns/</guid>
+      <description>&lt;p&gt;Chào mọi người! Design Patterns là một chủ đề mà mình nghĩ rất quan trọng nhưng lại khá dry khi học lý thuyết. Hôm nay mình muốn chia sẻ cách implement một số patterns phổ biến trong cả Java và JavaScript, qua những ví dụ thực tế mà mình đã áp dụng trong các dự án.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kết nối Socket trong Java</title>
+      <link>http://localhost:1313/myblog/blog/java-socket/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/java-socket/</guid>
+      <description>&lt;p&gt;Trong lập trình mạng bằng Java, &lt;code&gt;Socket&lt;/code&gt; là công cụ giúp kết nối giữa client và server.&lt;br&gt;&#xA;Bằng cách sử dụng &lt;strong&gt;java.net.Socket&lt;/strong&gt; và &lt;strong&gt;java.net.ServerSocket&lt;/strong&gt;, ta có thể xây dựng các ứng dụng chat, truyền file hoặc HTTP server đơn giản.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Từ Java đến JavaScript: Hành trình học lập trình của mình</title>
+      <link>http://localhost:1313/myblog/blog/java-to-javascript/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/java-to-javascript/</guid>
+      <description>&lt;p&gt;Chào các bạn! Hôm nay mình muốn chia sẻ về hành trình học lập trình của mình, từ Java đến JavaScript. Có lẽ nhiều bạn cũng đang băn khoăn giống mình: nên bắt đầu với ngôn ngữ nào? Học Java trước hay JavaScript trước?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Async Programming: Promise (JS) vs CompletableFuture (Java) - Battle of Asynchronous!</title>
+      <link>http://localhost:1313/myblog/blog/promise-vs-completablefuture/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/promise-vs-completablefuture/</guid>
+      <description>&lt;p&gt;Chào các bạn! Async programming là một trong những concepts khó nhất khi học lập trình. Mình đã struggle với nó khá lâu, từ callback hell của JavaScript đến thread complexity của Java. Hôm nay mình muốn chia sẻ cách hai ngôn ngữ này handle async operations - JavaScript với Promise và Java với CompletableFuture.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring Boot vs Node.js: Trải nghiệm backend development của mình</title>
+      <link>http://localhost:1313/myblog/blog/springboot-vs-nodejs/</link>
+      <pubDate>Thu, 25 Jan 2024 16:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/myblog/blog/springboot-vs-nodejs/</guid>
+      <description>&lt;p&gt;Xin chào các bạn! Sau khi học cả Java và JavaScript, mình có cơ hội làm việc với cả Spring Boot và Node.js trong các dự án thực tế. Hôm nay mình muốn chia sẻ trải nghiệm của mình khi develop backend với hai platform này.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JavaScript ES6&#43;: Những tính năng đã thay đổi cách mình code</title>
+      <link>http://localhost:1313/myblog/blog/javascript-es6&#43;/</link>
+      <pubDate>Mon, 22 Jan 2024 09:15:00 +0700</pubDate>
+      <guid>http://localhost:1313/myblog/blog/javascript-es6&#43;/</guid>
+      <description>&lt;p&gt;Chào mọi người! Khi mới học JavaScript, mình chỉ biết đến cú pháp cũ ES5. Nhưng khi tiếp xúc với ES6+ (ES2015 trở lên), thật sự mình cảm thấy như được &amp;ldquo;khai sáng&amp;rdquo;. Hôm nay mình muốn chia sẻ những tính năng ES6+ đã thay đổi hoàn toàn cách mình viết JavaScript.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

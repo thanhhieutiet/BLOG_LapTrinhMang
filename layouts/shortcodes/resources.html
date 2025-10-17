@@ -1,0 +1,5 @@
+<ul>
+  {{ range .Page.Resources }}
+  <li>Name: {{ .Name }} - Type: {{ .ResourceType }}</li>
+  {{ end }}
+</ul>

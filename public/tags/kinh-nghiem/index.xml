@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kinh-Nghiem on Blog Của Híu</title>
+    <link>http://localhost:1313/myblog/tags/kinh-nghiem/</link>
+    <description>Recent content in Kinh-Nghiem on Blog Của Híu</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/kinh-nghiem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Từ Java đến JavaScript: Hành trình học lập trình của mình</title>
+      <link>http://localhost:1313/myblog/blog/java-to-javascript/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/java-to-javascript/</guid>
+      <description>&lt;p&gt;Chào các bạn! Hôm nay mình muốn chia sẻ về hành trình học lập trình của mình, từ Java đến JavaScript. Có lẽ nhiều bạn cũng đang băn khoăn giống mình: nên bắt đầu với ngôn ngữ nào? Học Java trước hay JavaScript trước?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

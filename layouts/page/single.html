@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<div class="py-14">
+  {{- if .Params.image }}
+  <div class="mb-14">
+    {{- if (strings.HasPrefix .Params.image "http") }}
+    <!-- Ảnh từ URL external -->
+    <img
+      class="rounded-3xl w-full h-auto object-cover"
+      src="{{ .Params.image }}"
+      alt="{{ .Title }}"
+    />
+    {{- else }}
+    <!-- Ảnh từ Page Bundle -->
+    {{- with $img := .Resources.GetMatch .Params.image }} {{- $img = $img.Resize
+    "1200x" }}
+    <img
+      class="rounded-3xl w-full h-auto object-cover"
+      src="{{ $img.Permalink }}"
+      alt="{{ .Title }}"
+      width="{{ $img.Width }}"
+      height="{{ $img.Height }}"
+    />
+    {{- end }} {{- end }}
+  </div>
+  {{- end }}
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <article class="md:col-span-2 prose lg:prose-lg">
+      <header class="not-prose mb-14">
+        <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+      </header>
+
+      <div id="content" class="prose lg:prose-lg">{{- .Content -}}</div>
+    </article>
+
+    <aside class="md:col-span-1">{{- partial "content/aside.html" . -}}</aside>
+  </div>
+</div>
+
+{{ end }}

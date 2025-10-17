@@ -1,0 +1,49 @@
+<!-- categories.html -->
+{{- $taxonomy := "categories" -}} {{- with .page.Param $taxonomy -}}
+<div class="mt-8 pt-6 border-t border-gray-200 not-prose">
+  <h3 class="text-lg font-bold text-gray-900 mb-4">Chủ đề</h3>
+
+  <div class="flex flex-wrap items-center gap-3">
+    {{- range $index, $category := . -}} {{- with $.page.Site.GetPage (printf
+    "/%s/%s" $taxonomy $category) -}}
+    <a
+      href="{{ .Permalink }}"
+      class="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-700 border border-blue-200 hover:from-blue-100 hover:to-indigo-100 hover:border-blue-300 hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+    >
+      <svg
+        class="w-4 h-4 group-hover:scale-110 transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+        ></path>
+      </svg>
+      <span>{{ .LinkTitle }}</span>
+    </a>
+    {{- end -}} {{- end -}}
+  </div>
+</div>
+{{- end -}}
+
+<!-- tags.html -->
+{{- $taxonomy := "tags" -}} {{- with .page.Param $taxonomy -}}
+<div class="mt-6 not-prose">
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm font-medium text-gray-500">Tags:</span>
+    {{- range $index, $tag := . -}} {{- with $.page.Site.GetPage (printf
+    "/%s/%s" $taxonomy $tag) -}}
+    <a
+      href="{{ .Permalink }}"
+      class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-200"
+    >
+      #{{ .LinkTitle }}
+    </a>
+    {{- end -}} {{- end -}}
+  </div>
+</div>
+{{- end -}}

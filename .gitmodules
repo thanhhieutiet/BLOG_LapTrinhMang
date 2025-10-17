@@ -1,0 +1,3 @@
+[submodule "pehtheme-hugo"]
+	path = pehtheme-hugo
+	url = https://github.com/fauzanmy/pehtheme-hugo.git

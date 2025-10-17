@@ -1,0 +1,56 @@
+baseURL = 'https://yourusername.github.io/myblog/'
+languageCode = 'vi'
+title = 'Blog Của Híu'
+theme = 'pehtheme-hugo'
+summaryLength = '20'
+googleAnalytics = '' # Để trống nếu chưa có GA
+disqusShortname = '' # Để trống nếu không dùng Disqus
+
+[params]
+  description = 'Blog chia sẻ kiến thức về lập trình Java và JavaScript'
+  mainSections = ['blog']  # ← QUAN TRỌNG: Thay 'posts' thành 'blog' vì bạn dùng folder blog/
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  
+[author]
+  name = 'thanhhieutiet'
+  bio = 'Sinh viên đam mê lập trình Java và JavaScript'
+  avatar = '/images/avatar.jpg' # Tạo ảnh avatar sau
+  twitter = '' # Để trống nếu không có
+
+[pagination]
+  pagerSize = 9 # Hiển thị 9 bài/trang (bạn có 9 bài)
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  
+  [[menu.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 15
+  
+  [[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  
+  [[menu.main]]
+    name = 'Tags'
+    pageRef = '/tags'
+    weight = 25
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+  [module.mounts]
+    source = 'assets'
+    target = 'static'
