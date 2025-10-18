@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on HiuLab</title>
-    <link>http://localhost:1313/myblog/tags/security/</link>
+    <link>http://localhost:1313/tags/security/</link>
     <description>Recent content in Security on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 06 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tư duy bảo mật cho lập trình viên: Hiểu để phòng hơn là sửa</title>
-      <link>http://localhost:1313/myblog/blog/15-security-mindset-for-developers/</link>
+      <link>http://localhost:1313/blog/15-security-mindset-for-developers/</link>
       <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/15-security-mindset-for-developers/</guid>
+      <guid>http://localhost:1313/blog/15-security-mindset-for-developers/</guid>
       <description>&lt;p&gt;Trong nhiều năm đầu học lập trình, mình từng nghĩ “bảo mật là chuyện của chuyên gia”.&lt;br&gt;&#xA;Nhưng càng làm việc với các dự án liên quan đến &lt;strong&gt;AI Security&lt;/strong&gt;, mình càng nhận ra rằng:&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Feynman on HiuLab</title>
-    <link>http://localhost:1313/myblog/tags/feynman/</link>
+    <link>http://localhost:1313/tags/feynman/</link>
     <description>Recent content in Feynman on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/tags/feynman/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/feynman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Từ code đến tư duy: Vì sao lập trình giúp mình hiểu bản thân hơn</title>
-      <link>http://localhost:1313/myblog/blog/9-coding-and-self-understanding/</link>
+      <link>http://localhost:1313/blog/9-coding-and-self-understanding/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/9-coding-and-self-understanding/</guid>
+      <guid>http://localhost:1313/blog/9-coding-and-self-understanding/</guid>
       <description>&lt;p&gt;Khi mới bắt đầu học lập trình, mình chỉ nghĩ đơn giản rằng: “Code là để làm phần mềm chạy được”.&lt;br&gt;&#xA;Nhưng càng học lâu, càng va chạm với Java, JavaScript, rồi cả những dự án nhỏ mình tự thực hiện, mình lại phát hiện ra điều thú vị hơn:&lt;br&gt;&#xA;&lt;strong&gt;Cách mình code phản ánh rất rõ cách mình tư duy.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

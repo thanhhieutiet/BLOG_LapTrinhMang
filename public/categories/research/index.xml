@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research on HiuLab</title>
-    <link>http://localhost:1313/myblog/categories/research/</link>
+    <link>http://localhost:1313/categories/research/</link>
     <description>Recent content in Research on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/myblog/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tớ đã mất trắng 10 tiếng khi làm việc với malware như thế nào</title>
-      <link>http://localhost:1313/myblog/blog/18-malware-debug-10-hours/</link>
+      <link>http://localhost:1313/blog/18-malware-debug-10-hours/</link>
       <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/18-malware-debug-10-hours/</guid>
+      <guid>http://localhost:1313/blog/18-malware-debug-10-hours/</guid>
       <description>&lt;p&gt;Buổi sáng hôm đó, mình khởi động pipeline với tâm thế tự tin: 13,205 file APK, Androguard script mới tối ưu, hệ thống log sạch sẽ.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Đồ án Chuyên ngành: Transformer vs Malware Obfuscation – Cuộc chiến giữa mô hình và mã độc</title>
-      <link>http://localhost:1313/myblog/blog/17-dacn-transformer-vs-malware-obfuscation/</link>
+      <link>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</link>
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/17-dacn-transformer-vs-malware-obfuscation/</guid>
+      <guid>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</guid>
       <description>&lt;p&gt;Sau khi kết thúc Đồ án Cơ sở với câu hỏi &lt;em&gt;“BERT có thật sự hiểu mã độc tốt hơn CNN/LSTM?”&lt;/em&gt;, mình bước vào một thử thách lớn hơn:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Đồ án Cơ sở: Khi BERT &#39;hiểu&#39; mã độc tốt hơn con người</title>
-      <link>http://localhost:1313/myblog/blog/16-dacs-bert-malware-detection/</link>
+      <link>http://localhost:1313/blog/16-dacs-bert-malware-detection/</link>
       <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/16-dacs-bert-malware-detection/</guid>
+      <guid>http://localhost:1313/blog/16-dacs-bert-malware-detection/</guid>
       <description>&lt;p&gt;Mình vẫn nhớ khoảnh khắc đầu tiên khi mô hình BERT chạy xong epoch cuối cùng và hiển thị &lt;strong&gt;accuracy 94%&lt;/strong&gt;.&lt;br&gt;&#xA;Đó là lúc mình nhận ra: &lt;strong&gt;AI không chỉ “dự đoán dữ liệu” – mà còn có thể “hiểu ngữ cảnh” của mã độc.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
