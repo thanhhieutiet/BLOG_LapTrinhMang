@@ -1,0 +1,86 @@
+<div class="lg:sticky lg:top-8">
+  <!-- Banner Section -->
+  {{- partial "content/aside-banner.html" . -}}
+  <!-- Table of Contents - Chỉ hiển thị nếu có TOC -->
+  {{- if .TableOfContents }}
+  <div class="bg-white border rounded-2xl p-6 shadow-sm mb-6">
+    <h2 class="font-bold text-xl mb-6">Mục lục</h2>
+    <nav class="toc">{{ .TableOfContents }}</nav>
+  </div>
+  {{- end }}
+  <!-- Categories Section -->
+  {{- partial "content/aside-categories.html" . -}}
+  <!-- Recent Posts Section -->
+  <div class="space-y-6 mt-6">
+    <h2 class="font-bold text-xl mb-4">Bài viết mới</h2>
+    {{ range first 5 .Site.RegularPages }} {{- partial "content/list-post.html"
+    . -}} {{ end }}
+  </div>
+  <style>
+    /* Style cho TOC */
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .toc ul ul {
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+    .toc a {
+      display: block;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      color: #374151;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+    }
+    .toc a:hover {
+      background-color: #eff6ff;
+      color: #2563eb;
+      transform: translateX(4px);
+    }
+    .toc a.active {
+      background-color: #1f2937;
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Đảm bảo sidebar không che nội dung */
+    .lg\:sticky {
+      align-self: flex-start;
+    }
+    /* TOC mở rộng theo nội dung */
+    .toc {
+      overflow-x: hidden;
+    }
+  </style>
+  <script>
+    function updateActiveTOC() {
+      const headings = document.querySelectorAll("h1[id], h2[id], h3[id]");
+      const tocLinks = document.querySelectorAll(".toc a");
+      tocLinks.forEach((link) => link.classList.remove("active"));
+      let activeHeading = null;
+      for (let heading of headings) {
+        if (heading.getBoundingClientRect().top <= 150) {
+          activeHeading = heading;
+        } else {
+          break;
+        }
+      }
+      if (activeHeading) {
+        const id = activeHeading.id;
+        const activeLink = document.querySelector(`.toc a[href="#${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", updateActiveTOC, { passive: true });
+    updateActiveTOC();
+  </script>
+</div>

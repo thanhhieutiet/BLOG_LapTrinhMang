@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Networking on Blog Của Híu</title>
+    <title>Networking on HiuLab</title>
     <link>http://localhost:1313/myblog/tags/networking/</link>
-    <description>Recent content in Networking on Blog Của Híu</description>
+    <description>Recent content in Networking on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kết nối Socket trong Java</title>
-      <link>http://localhost:1313/myblog/blog/java-socket/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/java-socket/</guid>
-      <description>&lt;p&gt;Trong lập trình mạng bằng Java, &lt;code&gt;Socket&lt;/code&gt; là công cụ giúp kết nối giữa client và server.&lt;br&gt;&#xA;Bằng cách sử dụng &lt;strong&gt;java.net.Socket&lt;/strong&gt; và &lt;strong&gt;java.net.ServerSocket&lt;/strong&gt;, ta có thể xây dựng các ứng dụng chat, truyền file hoặc HTTP server đơn giản.&lt;/p&gt;</description>
+      <title>JSON, API và giao tiếp dữ liệu: Khi JavaScript nói chuyện với thế giới</title>
+      <link>http://localhost:1313/myblog/blog/13-json-api-communication/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/13-json-api-communication/</guid>
+      <description>&lt;p&gt;Một trong những khoảnh khắc khiến mình “ngộ” ra sức mạnh thực sự của JavaScript,&lt;br&gt;&#xA;là khi nhận ra ngôn ngữ này không chỉ chạy trong trình duyệt – mà còn &lt;strong&gt;nói chuyện với cả thế giới&lt;/strong&gt; thông qua &lt;strong&gt;API&lt;/strong&gt; và &lt;strong&gt;JSON&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WebSocket &amp; REST: Hai cách nói chuyện khác nhau giữa client và server</title>
+      <link>http://localhost:1313/myblog/blog/8-websocket-vs-rest/</link>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/8-websocket-vs-rest/</guid>
+      <description>&lt;p&gt;Chào các bạn 👋&lt;br&gt;&#xA;Nếu bạn từng viết API bằng &lt;strong&gt;Spring Boot&lt;/strong&gt; hoặc &lt;strong&gt;Node.js/Express&lt;/strong&gt;, chắc hẳn đã nghe qua hai cái tên quen thuộc: &lt;strong&gt;REST&lt;/strong&gt; và &lt;strong&gt;WebSocket&lt;/strong&gt;.&lt;br&gt;&#xA;Lúc đầu, mình cứ nghĩ chúng &amp;ldquo;na ná&amp;rdquo; nhau — đều là cách client nói chuyện với server thôi mà.&lt;br&gt;&#xA;Nhưng hoá ra… &lt;strong&gt;một bên là “gửi thư tay”, còn một bên là “trò chuyện qua điện thoại”&lt;/strong&gt; 📞.&lt;br&gt;&#xA;Cùng mình bóc tách nhé 👇&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -16,6 +16,26 @@
       targetElement.classList.toggle("close", !isHidden);
       targetElement.classList.toggle("open", isHidden);
     }
+    const observerOptions = {
+      threshold: 0.1,
+      // Kích hoạt khi 10% của element hiển thị trên màn hình
+      rootMargin: "0px 0px -50px 0px"
+      // Có thể điều chỉnh để element hiển thị sớm hơn hoặc muộn hơn
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("open");
+          entry.target.classList.remove("close");
+        } else {
+          entry.target.classList.remove("open");
+          entry.target.classList.add("close");
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll(".hidden").forEach((element) => {
+      observer.observe(element);
+    });
     toggleButtons.forEach((button) => {
       button.addEventListener("click", function() {
         const targetIds = this.getAttribute("data-target").split(" ");

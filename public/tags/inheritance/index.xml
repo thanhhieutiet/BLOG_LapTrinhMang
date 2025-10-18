@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inheritance on HiuLab</title>
+    <link>http://localhost:1313/myblog/tags/inheritance/</link>
+    <description>Recent content in Inheritance on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/inheritance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prototype, Class và Kế thừa: JavaScript thực sự hoạt động như thế nào?</title>
+      <link>http://localhost:1313/myblog/blog/12-prototype-and-class/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/12-prototype-and-class/</guid>
+      <description>&lt;p&gt;Khi học JavaScript Essentials 2, mình từng ngạc nhiên khi thấy khái niệm &lt;strong&gt;class&lt;/strong&gt; xuất hiện trong một ngôn ngữ vốn “phi hướng đối tượng”.&lt;br&gt;&#xA;Nhưng khi hiểu sâu hơn, mình nhận ra rằng JavaScript &lt;strong&gt;chưa bao giờ thật sự có class như Java&lt;/strong&gt; — nó chỉ &lt;em&gt;mô phỏng&lt;/em&gt; lại bằng một cơ chế tên là &lt;strong&gt;prototype&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

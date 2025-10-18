@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Oop on Blog Của Híu</title>
+    <title>Oop on HiuLab</title>
     <link>http://localhost:1313/myblog/tags/oop/</link>
-    <description>Recent content in Oop on Blog Của Híu</description>
+    <description>Recent content in Oop on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/tags/oop/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Design Patterns trong Java vs JavaScript: Cùng bài toán, khác cách giải</title>
-      <link>http://localhost:1313/myblog/blog/design-patterns/</link>
-      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/blog/design-patterns/</guid>
-      <description>&lt;p&gt;Chào mọi người! Design Patterns là một chủ đề mà mình nghĩ rất quan trọng nhưng lại khá dry khi học lý thuyết. Hôm nay mình muốn chia sẻ cách implement một số patterns phổ biến trong cả Java và JavaScript, qua những ví dụ thực tế mà mình đã áp dụng trong các dự án.&lt;/p&gt;</description>
+      <title>Prototype, Class và Kế thừa: JavaScript thực sự hoạt động như thế nào?</title>
+      <link>http://localhost:1313/myblog/blog/12-prototype-and-class/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/blog/12-prototype-and-class/</guid>
+      <description>&lt;p&gt;Khi học JavaScript Essentials 2, mình từng ngạc nhiên khi thấy khái niệm &lt;strong&gt;class&lt;/strong&gt; xuất hiện trong một ngôn ngữ vốn “phi hướng đối tượng”.&lt;br&gt;&#xA;Nhưng khi hiểu sâu hơn, mình nhận ra rằng JavaScript &lt;strong&gt;chưa bao giờ thật sự có class như Java&lt;/strong&gt; — nó chỉ &lt;em&gt;mô phỏng&lt;/em&gt; lại bằng một cơ chế tên là &lt;strong&gt;prototype&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

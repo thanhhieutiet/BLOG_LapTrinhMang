@@ -1,10 +1,10 @@
 ---
 title: "5 Sai lầm phổ biến khi học Java mà mình đã mắc phải"
 date: 2025-09-18
-weight: 1
+# weight: 1
 categories: ["programming"]
-tags: ["java", "javascript"]
-author: "Tên bạn"
+tags: ["java"]
+author: "Tiết Thanh Minh Hiếu"
 description: "Những sai lầm cơ bản khi học Java và cách khắc phục chúng qua kinh nghiệm thực tế"
 image: "thumbnail.png"
 # image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=750"

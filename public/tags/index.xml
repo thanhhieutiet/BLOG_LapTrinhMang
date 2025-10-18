@@ -1,13 +1,181 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blog Của Híu</title>
+    <title>Tags on HiuLab</title>
     <link>http://localhost:1313/myblog/tags/</link>
-    <description>Recent content in Tags on Blog Của Híu</description>
+    <description>Recent content in Tags on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Androguard</title>
+      <link>http://localhost:1313/myblog/tags/androguard/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/androguard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debugging</title>
+      <link>http://localhost:1313/myblog/tags/debugging/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/debugging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>http://localhost:1313/myblog/tags/malware/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/myblog/tags/python/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/myblog/tags/research/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/myblog/tags/machine-learning/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transformer</title>
+      <link>http://localhost:1313/myblog/tags/transformer/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/transformer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>http://localhost:1313/myblog/tags/cybersecurity/</link>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mindset</title>
+      <link>http://localhost:1313/myblog/tags/mindset/</link>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/mindset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/myblog/tags/security/</link>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/myblog/tags/javascript/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Api</title>
+      <link>http://localhost:1313/myblog/tags/api/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fetch</title>
+      <link>http://localhost:1313/myblog/tags/fetch/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/fetch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Json</title>
+      <link>http://localhost:1313/myblog/tags/json/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/json/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/myblog/tags/networking/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Class</title>
+      <link>http://localhost:1313/myblog/tags/class/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/class/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inheritance</title>
+      <link>http://localhost:1313/myblog/tags/inheritance/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/inheritance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oop</title>
+      <link>http://localhost:1313/myblog/tags/oop/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/oop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prototype</title>
+      <link>http://localhost:1313/myblog/tags/prototype/</link>
+      <pubDate>Fri, 03 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/prototype/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bug</title>
+      <link>http://localhost:1313/myblog/tags/bug/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/bug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debug</title>
+      <link>http://localhost:1313/myblog/tags/debug/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/debug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logic</title>
+      <link>http://localhost:1313/myblog/tags/logic/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/logic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Asynchronous</title>
+      <link>http://localhost:1313/myblog/tags/asynchronous/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/asynchronous/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event Loop</title>
+      <link>http://localhost:1313/myblog/tags/event-loop/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/event-loop/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Java</title>
       <link>http://localhost:1313/myblog/tags/java/</link>
@@ -16,45 +184,73 @@
       <description></description>
     </item>
     <item>
-      <title>Javascript</title>
-      <link>http://localhost:1313/myblog/tags/javascript/</link>
-      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hoc-Tap</title>
-      <link>http://localhost:1313/myblog/tags/hoc-tap/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/hoc-tap/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kinh-Nghiem</title>
-      <link>http://localhost:1313/myblog/tags/kinh-nghiem/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/myblog/tags/kinh-nghiem/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Backend</title>
-      <link>http://localhost:1313/myblog/tags/backend/</link>
-      <pubDate>Thu, 25 Jan 2024 16:20:00 +0700</pubDate>
-      <guid>http://localhost:1313/myblog/tags/backend/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Nodejs</title>
       <link>http://localhost:1313/myblog/tags/nodejs/</link>
-      <pubDate>Thu, 25 Jan 2024 16:20:00 +0700</pubDate>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/tags/nodejs/</guid>
       <description></description>
     </item>
     <item>
-      <title>Spring-Boot</title>
-      <link>http://localhost:1313/myblog/tags/spring-boot/</link>
-      <pubDate>Thu, 25 Jan 2024 16:20:00 +0700</pubDate>
-      <guid>http://localhost:1313/myblog/tags/spring-boot/</guid>
+      <title>Closure</title>
+      <link>http://localhost:1313/myblog/tags/closure/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/closure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hoisting</title>
+      <link>http://localhost:1313/myblog/tags/hoisting/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/hoisting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scope</title>
+      <link>http://localhost:1313/myblog/tags/scope/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/scope/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Feynman</title>
+      <link>http://localhost:1313/myblog/tags/feynman/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/feynman/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Learning</title>
+      <link>http://localhost:1313/myblog/tags/learning/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rest</title>
+      <link>http://localhost:1313/myblog/tags/rest/</link>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/rest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Websocket</title>
+      <link>http://localhost:1313/myblog/tags/websocket/</link>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/tags/websocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Es6</title>
+      <link>http://localhost:1313/myblog/tags/es6/</link>
+      <pubDate>Mon, 22 Jan 2024 09:15:00 +0700</pubDate>
+      <guid>http://localhost:1313/myblog/tags/es6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web-Development</title>
+      <link>http://localhost:1313/myblog/tags/web-development/</link>
+      <pubDate>Mon, 22 Jan 2024 09:15:00 +0700</pubDate>
+      <guid>http://localhost:1313/myblog/tags/web-development/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,6 +1,6 @@
 baseURL = 'https://yourusername.github.io/myblog/'
 languageCode = 'vi'
-title = 'Blog Của Híu'
+title = 'HiuLab'
 theme = 'pehtheme-hugo'
 summaryLength = '20'
 googleAnalytics = '' # Để trống nếu chưa có GA
@@ -17,10 +17,10 @@ disqusShortname = '' # Để trống nếu không dùng Disqus
   category = "categories"
   tag = "tags"
   
-[author]
-  name = 'thanhhieutiet'
-  bio = 'Sinh viên đam mê lập trình Java và JavaScript'
-  avatar = '/images/avatar.jpg' # Tạo ảnh avatar sau
+[params.author]
+  name = 'Tiết Thanh Minh Hiếu'
+  bio = 'Từ một sinh viên CNTT, tôi đã tìm thấy niềm đam mê thực sự tại giao điểm giữa AI và Cybersecurity.'
+  avatar = 'images/avatar_2.png' # Tạo ảnh avatar sau
   twitter = '' # Để trống nếu không có
 
 [pagination]
@@ -31,21 +31,33 @@ disqusShortname = '' # Để trống nếu không dùng Disqus
     name = 'Home'
     pageRef = '/'
     weight = 10
-  
+
   [[menu.main]]
     name = 'Blog'
     pageRef = '/blog'
     weight = 15
   
-  [[menu.main]]
-    name = 'About'
-    pageRef = '/about'
+   [[menu.main]]
+    name = 'Categories'
+    pageRef = '/categories'
     weight = 20
-  
+
   [[menu.main]]
     name = 'Tags'
     pageRef = '/tags'
     weight = 25
+  
+  [[menu.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 30
+  
+  [[menu.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 35 
+  
+  
 
 [module]
   [module.hugoVersion]

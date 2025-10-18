@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Blog Của Híu</title>
+    <title>Categories on HiuLab</title>
     <link>http://localhost:1313/myblog/categories/</link>
-    <description>Recent content in Categories on Blog Của Híu</description>
+    <description>Recent content in Categories on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 01 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/myblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/myblog/categories/ai/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/myblog/categories/research/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/categories/research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/myblog/categories/security/</link>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/categories/security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Programming</title>
       <link>http://localhost:1313/myblog/categories/programming/</link>
-      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/myblog/categories/programming/</guid>
       <description></description>
     </item>
