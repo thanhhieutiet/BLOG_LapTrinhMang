@@ -1,4 +1,4 @@
-baseURL = 'https://yourusername.github.io/myblog/'
+baseURL = 'https://blog-lap-trinh-mang.vercel.app/'
 languageCode = 'vi'
 title = 'HiuLab'
 theme = 'pehtheme-hugo'
@@ -63,6 +63,4 @@ disqusShortname = '' # Để trống nếu không dùng Disqus
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
-  [module.mounts]
-    source = 'assets'
-    target = 'static'
+  
