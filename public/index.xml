@@ -6,7 +6,7 @@
     <description>Recent content on HiuLab</description>
     <generator>Hugo</generator>
     <language>vi</language>
-    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tiết Thanh Minh Hiếu - AI Security Researcher</title>
@@ -14,34 +14,6 @@
       <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;h1 id=&#34;xin-chào-tôi-là-tiết-thanh-minh-hiếu&#34;&gt;Xin chào! Tôi là Tiết Thanh Minh Hiếu&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI Security Researcher&lt;/strong&gt; | Sinh viên CNTT K22, HUTECH&lt;/p&gt;&#xA;&lt;p&gt;Trong 3 năm qua, tôi đã đi từ sinh viên CNTT thông thường đến Top 1 lớp Đồ án Cơ sở (9.0/10) và là 1 trong 10 đề tài được duyệt thẳng NCKH. Hành trình của tôi tập trung vào giao điểm giữa AI và Cybersecurity - nơi công nghệ tiên tiến gặp gỡ bảo mật thực tế.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tớ đã mất trắng 10 tiếng khi làm việc với malware như thế nào</title>
-      <link>http://localhost:1313/blog/18-malware-debug-10-hours/</link>
-      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/18-malware-debug-10-hours/</guid>
-      <description>&lt;p&gt;Buổi sáng hôm đó, mình khởi động pipeline với tâm thế tự tin: 13,205 file APK, Androguard script mới tối ưu, hệ thống log sạch sẽ.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Đồ án Chuyên ngành: Transformer vs Malware Obfuscation – Cuộc chiến giữa mô hình và mã độc</title>
-      <link>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</link>
-      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</guid>
-      <description>&lt;p&gt;Sau khi kết thúc Đồ án Cơ sở với câu hỏi &lt;em&gt;“BERT có thật sự hiểu mã độc tốt hơn CNN/LSTM?”&lt;/em&gt;, mình bước vào một thử thách lớn hơn:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Đồ án Cơ sở: Khi BERT &#39;hiểu&#39; mã độc tốt hơn con người</title>
-      <link>http://localhost:1313/blog/16-dacs-bert-malware-detection/</link>
-      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/16-dacs-bert-malware-detection/</guid>
-      <description>&lt;p&gt;Mình vẫn nhớ khoảnh khắc đầu tiên khi mô hình BERT chạy xong epoch cuối cùng và hiển thị &lt;strong&gt;accuracy 94%&lt;/strong&gt;.&lt;br&gt;&#xA;Đó là lúc mình nhận ra: &lt;strong&gt;AI không chỉ “dự đoán dữ liệu” – mà còn có thể “hiểu ngữ cảnh” của mã độc.&lt;/strong&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Tư duy bảo mật cho lập trình viên: Hiểu để phòng hơn là sửa</title>
-      <link>http://localhost:1313/blog/15-security-mindset-for-developers/</link>
-      <pubDate>Mon, 06 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/15-security-mindset-for-developers/</guid>
-      <description>&lt;p&gt;Trong nhiều năm đầu học lập trình, mình từng nghĩ “bảo mật là chuyện của chuyên gia”.&lt;br&gt;&#xA;Nhưng càng làm việc với các dự án liên quan đến &lt;strong&gt;AI Security&lt;/strong&gt;, mình càng nhận ra rằng:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Performance 101: Vì sao JavaScript chậm – và cách mình tối ưu code web</title>
@@ -119,6 +91,34 @@
       <pubDate>Tue, 19 Aug 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/8-websocket-vs-rest/</guid>
       <description>&lt;p&gt;Chào các bạn 👋&lt;br&gt;&#xA;Nếu bạn từng viết API bằng &lt;strong&gt;Spring Boot&lt;/strong&gt; hoặc &lt;strong&gt;Node.js/Express&lt;/strong&gt;, chắc hẳn đã nghe qua hai cái tên quen thuộc: &lt;strong&gt;REST&lt;/strong&gt; và &lt;strong&gt;WebSocket&lt;/strong&gt;.&lt;br&gt;&#xA;Lúc đầu, mình cứ nghĩ chúng &amp;ldquo;na ná&amp;rdquo; nhau — đều là cách client nói chuyện với server thôi mà.&lt;br&gt;&#xA;Nhưng hoá ra… &lt;strong&gt;một bên là “gửi thư tay”, còn một bên là “trò chuyện qua điện thoại”&lt;/strong&gt; 📞.&lt;br&gt;&#xA;Cùng mình bóc tách nhé 👇&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tớ đã mất trắng 10 tiếng khi làm việc với malware như thế nào</title>
+      <link>http://localhost:1313/blog/18-malware-debug-10-hours/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/18-malware-debug-10-hours/</guid>
+      <description>&lt;p&gt;Buổi sáng hôm đó, mình khởi động pipeline với tâm thế tự tin: 13,205 file APK, Androguard script mới tối ưu, hệ thống log sạch sẽ.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Đồ án Chuyên ngành: Transformer vs Malware Obfuscation – Cuộc chiến giữa mô hình và mã độc</title>
+      <link>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</link>
+      <pubDate>Fri, 08 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/17-dacn-transformer-vs-malware-obfuscation/</guid>
+      <description>&lt;p&gt;Sau khi kết thúc Đồ án Cơ sở với câu hỏi &lt;em&gt;“BERT có thật sự hiểu mã độc tốt hơn CNN/LSTM?”&lt;/em&gt;, mình bước vào một thử thách lớn hơn:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Đồ án Cơ sở: Khi BERT &#39;hiểu&#39; mã độc tốt hơn con người</title>
+      <link>http://localhost:1313/blog/16-dacs-bert-malware-detection/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/16-dacs-bert-malware-detection/</guid>
+      <description>&lt;p&gt;Mình vẫn nhớ khoảnh khắc đầu tiên khi mô hình BERT chạy xong epoch cuối cùng và hiển thị &lt;strong&gt;accuracy 94%&lt;/strong&gt;.&lt;br&gt;&#xA;Đó là lúc mình nhận ra: &lt;strong&gt;AI không chỉ “dự đoán dữ liệu” – mà còn có thể “hiểu ngữ cảnh” của mã độc.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tư duy bảo mật cho lập trình viên: Hiểu để phòng hơn là sửa</title>
+      <link>http://localhost:1313/blog/15-security-mindset-for-developers/</link>
+      <pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/15-security-mindset-for-developers/</guid>
+      <description>&lt;p&gt;Trong nhiều năm đầu học lập trình, mình từng nghĩ “bảo mật là chuyện của chuyên gia”.&lt;br&gt;&#xA;Nhưng càng làm việc với các dự án liên quan đến &lt;strong&gt;AI Security&lt;/strong&gt;, mình càng nhận ra rằng:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Async Programming: Promise (JS) vs CompletableFuture (Java) - Battle of Asynchronous!</title>

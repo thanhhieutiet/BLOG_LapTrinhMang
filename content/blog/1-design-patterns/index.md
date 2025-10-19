@@ -6,7 +6,6 @@ categories: ["programming"]
 author: "Tiết Thanh Minh Hiếu"
 description: "So sánh cách implement các Design Patterns phổ biến trong Java và JavaScript"
 image: "thumbnail.png"
-# image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=750"
 ---
 
 Chào mọi người! Design Patterns là một chủ đề mà mình nghĩ rất quan trọng nhưng lại khá dry khi học lý thuyết. Hôm nay mình muốn chia sẻ cách implement một số patterns phổ biến trong cả Java và JavaScript, qua những ví dụ thực tế mà mình đã áp dụng trong các dự án.

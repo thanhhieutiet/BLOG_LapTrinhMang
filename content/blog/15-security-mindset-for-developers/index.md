@@ -1,6 +1,6 @@
 ---
 title: "Tư duy bảo mật cho lập trình viên: Hiểu để phòng hơn là sửa"
-date: 2025-10-06
+date: 2025-08-06
 categories: ["security", "programming"]
 tags: ["security", "mindset", "cybersecurity"]
 author: "Tiết Thanh Minh Hiếu"

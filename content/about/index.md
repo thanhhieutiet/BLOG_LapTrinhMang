@@ -30,7 +30,7 @@ Trở thành chuyên gia AI Security và giảng viên truyền cảm hứng cho
 
 **Thành tích nổi bật:**
 
-- **Top 1 lớp Đồ án Cơ sở (2024)** - Điểm 9.0/10, duy nhất trong lớp đạt xuất sắc
+- **Top 1 lớp Đồ án Cơ sở (2025)** - Điểm 9.0/10
 - **Nghiên cứu Khoa học Sinh viên (NCKH)** - Top 10/60+ đề tài được duyệt thẳng vòng sơ khảo
 
 ---
@@ -121,7 +121,7 @@ _Malware recall: 5% → 89% sau khi cân bằng dữ liệu_
 
 **Tech Stack:** Python, Androguard, BERT/Transformer, ProGuard, Flask/FastAPI, YARA
 
-### 🎯 Giai đoạn 3: Nghiên cứu Chuyên sâu (2025) - NCKH
+### 🎯 Giai đoạn 3: Nghiên cứu Chuyên sâu (2025+) - NCKH
 
 **"Phát hiện malware qua Function Call Graph khi static analysis không đủ"**
 

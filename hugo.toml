@@ -3,8 +3,8 @@ languageCode = 'vi'
 title = 'HiuLab'
 theme = 'pehtheme-hugo'
 summaryLength = '20'
-googleAnalytics = '' # Để trống nếu chưa có GA
-disqusShortname = '' # Để trống nếu không dùng Disqus
+googleAnalytics = ''
+disqusShortname = '' 
 
 [params]
   description = 'Blog chia sẻ kiến thức về lập trình Java và JavaScript'
@@ -28,32 +28,32 @@ disqusShortname = '' # Để trống nếu không dùng Disqus
 
 [menu]
   [[menu.main]]
-    name = 'Home'
+    name = 'Trang chủ'
     pageRef = '/'
     weight = 10
 
   [[menu.main]]
-    name = 'Blog'
+    name = 'Bài viết'
     pageRef = '/blog'
     weight = 15
   
    [[menu.main]]
-    name = 'Categories'
+    name = 'Danh mục'
     pageRef = '/categories'
     weight = 20
 
   [[menu.main]]
-    name = 'Tags'
+    name = 'Thẻ'
     pageRef = '/tags'
     weight = 25
   
   [[menu.main]]
-    name = 'About'
+    name = 'Về tôi'
     pageRef = '/about'
     weight = 30
   
   [[menu.main]]
-    name = 'Contact'
+    name = 'Liên hệ'
     pageRef = '/contact'
     weight = 35 
   
