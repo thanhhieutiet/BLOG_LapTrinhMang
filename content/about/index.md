@@ -18,7 +18,7 @@ Trong 3 năm qua, tôi đã đi từ sinh viên CNTT thông thường đến Top
 
 ## Tầm nhìn
 
-Trở thành chuyên gia AI Security và giảng viên truyền cảm hứng cho thế hệ sau. Tôi tin rằng cách học tốt nhất là dạy lại cho người khác - mỗi bài viết tôi chia sẻ không chỉ giúp bạn đọc mà còn giúp tôi củng cố kiến thức của chính mình.
+Phát triển chuyên môn sâu về AI Security và chia sẻ kiến thức cho cộng đồng. Tôi tin rằng cách học tốt nhất là dạy lại cho người khác - blog này là nơi tôi thực hành triết lý đó.
 
 ---
 
@@ -32,6 +32,12 @@ Trở thành chuyên gia AI Security và giảng viên truyền cảm hứng cho
 
 - **Top 1 lớp Đồ án Cơ sở (2025)** - Điểm 9.0/10
 - **Nghiên cứu Khoa học Sinh viên (NCKH)** - Top 10/60+ đề tài được duyệt thẳng vòng sơ khảo
+
+**Chứng chỉ**
+
+- Hoàn thành: Networking Basics | JavaScript Essentials 1 & 2 (Cisco Academy)
+- Đang theo học: Google Cybersecurity Certificate
+- Dự định: IBM Cybersecurity Analyst, CompTIA Security+
 
 ---
 
@@ -52,46 +58,33 @@ Trở thành chuyên gia AI Security và giảng viên truyền cảm hứng cho
 
 - Python (Advanced), Java (Intermediate)
 - TensorFlow, PyTorch, Flask/FastAPI
-- Git, Linux/Ubuntu, Docker
-
-**Chứng chỉ**
-
-- Hoàn thành: Networking Basics | JavaScript Essentials 1 & 2 (Cisco Academy)
-- Đang theo học: Google Cybersecurity Certificate
-- Dự định: IBM Cybersecurity Analyst, CompTIA Security+
+- Git, Linux/Ubuntu
 
 ---
 
 ## Hành trình Nghiên cứu
 
-Nghiên cứu của tôi tập trung vào **phát hiện mã độc Android bằng Transformer Networks**, với mục tiêu đối phó các kỹ thuật né tránh ngày càng tinh vi.
+**Mục tiêu nghiên cứu:** Phát hiện mã độc Android bằng Transformer Networks, đối phó các kỹ thuật né tránh tinh vi.
 
 ---
 
 ### 🔬 Giai đoạn 1: Chứng minh khái niệm (Q2/2025) - Đồ án Cơ sở
 
-**"Transformer Networks có phát hiện mã độc tốt hơn các phương pháp truyền thống?"**
+**Câu hỏi:** BERT có phát hiện mã độc tốt hơn CNN/LSTM?
 
-**Phương pháp:** So sánh BERT vs CNN vs LSTM trên MH-100K (100K mẫu), giải quyết vấn đề mất cân bằng dữ liệu nghiêm trọng.
+**Dataset:** MH-100K (100K mẫu)
 
 **Kết quả:**
 
 <div align="center">
 
-![So sánh hiệu suất](roc_curves_comparison.png)
+![Model Comparison](roc_curves_comparison.png)
 
-_BERT: 94% | CNN: 74% | LSTM: 69% (+20% improvement)_
-
-![Confusion Matrix](detailed_confusion_matrix.png)
-
-_Malware recall: 5% → 89% sau khi cân bằng dữ liệu_
+_BERT: 94% | CNN: 74% | LSTM: 69%_
 
 </div>
 
-**Tại sao BERT vượt trội?** Hiểu ngữ cảnh kết hợp (INTERNET + READ_CONTACTS = rủi ro), trong khi CNN/LSTM chỉ nhìn từng đặc trưng riêng lẻ.
-
-**Recognition:** Top 1 lớp (9.0/10)  
-**Câu hỏi tiếp theo:** _Còn hoạt động khi bị obfuscated?_
+**Insight:** BERT hiểu ngữ cảnh kết hợp (INTERNET + READ_CONTACTS = rủi ro), CNN/LSTM chỉ nhìn từng feature riêng lẻ.
 
 ---
 
@@ -99,75 +92,71 @@ _Malware recall: 5% → 89% sau khi cân bằng dữ liệu_
 
 **"BERT có thể phát hiện mã độc đã bị che giấu bằng obfuscation?"**
 
-**Dataset:**
+**Dataset:** CICMalDroid 2020
 
-- **CICMalDroid 2020** - Benchmark dataset được công nhận trong academic research
-- Malware: 13,205 APK từ 4 families nguy hiểm nhất
+- Malware: 13,205 APK từ 4 families
 - Benign: ~48GB samples (đang trong quá trình xử lý)
 - Quy mô tổng: 70GB+ dữ liệu thô
 
-**Phương pháp:**
+**Tiến trình:**
 
-- Xử lý 13,205 malware APK với pipeline tự động
-- Trích xuất features: Permissions, API calls, code structures
-- Tạo obfuscated variants bằng ProGuard
-- Huấn luyện BERT trên cả benign và obfuscated malware
-
-**Kết quả:**
-
-- Tỷ lệ xử lý thành công: **94.3%** (12,453/13,205 malware APK)
-- Pipeline có khả năng scale lên hàng chục GB dữ liệu
 - **1/22 đề tài** được duyệt thẳng không cần chỉnh sửa
+- Tỷ lệ xử lý thành công: **94.3%** (12,453/13,205 malware APK)
+- Đang hoàn thiện obfuscation testing
 
 **Tech Stack:** Python, Androguard, BERT/Transformer, ProGuard, Flask/FastAPI, YARA
 
 ### 🎯 Giai đoạn 3: Nghiên cứu Chuyên sâu (2025+) - NCKH
 
-**"Phát hiện malware qua Function Call Graph khi static analysis không đủ"**
-
-**Vấn đề:**
-Obfuscation tĩnh có thể bị vượt qua nhờ BERT, nhưng các kỹ thuật evasion nâng cao như API hiding, dynamic loading, control flow obfuscation vẫn là thách thức lớn.
+**Câu hỏi:** FCG/BCG có vượt qua static analysis?
 
 **Giải pháp đề xuất - Phân tích đồ thị gọi hàm (FCG/BCG):**
 
 Ý tưởng cốt lõi: _Malware có thể che giấu tên hàm, nhưng khó che giấu luồng thực thi!_
 
-**Phương pháp:**
-
-1. Trích xuất Function Call Graph/Better Call Graph từ APK
-2. Chuyển đổi graph thành embeddings
-3. Áp dụng Graph Neural Network + BERT
-4. Phát hiện suspicious call patterns
-
 **Ưu thế:** Malware phải thực thi để hoạt động, và khi thực thi sẽ để lại dấu vết trong call graph - rất khó che giấu hoàn toàn.
 
 **Mục tiêu:**
 
-- Độ chính xác >95% trên các kỹ thuật evasion nâng cao
+- Cải thiện độ chính xác
 - Tool phân tích FCG/BCG cho Android APK
 - Research paper với phương pháp và dataset đóng góp
-
-**Tiến độ:**
-
-- Đề tài approved (Top 10/60+)
-- Đang xây dựng FCG extraction pipeline
-- Thiết kế GNN architecture
 
 **Giảng viên hướng dẫn:** Cô Đinh Huỳnh Tuệ Tuệ
 
 ---
 
+## Thách thức & Bài học
+
+**Bẫy số liệu ảo**
+
+Model ban đầu đạt 88% accuracy - nghe tốt đấy! Nhưng thực tế chỉ phát hiện được **5% mã độc** - gần như vô dụng.
+
+_Giải pháp:_ Cân bằng dữ liệu → cải thiện lên **89%** khả năng bắt malware.
+
+_Bài học:_ Độ chính xác cao ≠ model hoạt động tốt trong thực tế.
+
+---
+
+**Dữ liệu thực tế không như sách vở**
+
+Xử lý 13,000+ file APK gặp: file lỗi, hết RAM với 70GB dữ liệu, tool báo lỗi liên tục.
+
+_Giải pháp:_ Xử lý từng phần, tự động bỏ qua file lỗi, quản lý bộ nhớ cẩn thận.
+
+_Bài học:_ Dữ liệu thật phức tạp gấp 10 lần dataset mẫu. Kỹ năng code quan trọng không kém AI.
+
 ## Timeline Tổng quan
 
-| Giai đoạn             | Câu hỏi nghiên cứu               | Kết quả chính                             |
-| --------------------- | -------------------------------- | ----------------------------------------- |
-| **🎯 ĐACS (Q2/2025)** | BERT có tốt hơn CNN/LSTM?        | ✅ **+20% accuracy**<br>✅ Top 1 (9.0/10) |
-| **🚀 ĐACN (Q4/2025)** | BERT có chống được obfuscation?  | ✅ **94.3% success**<br>✅ 1/22 approved  |
-| **🔬 NCKH (2025+)**   | FCG/BCG có vượt static analysis? | 🔄 **In progress**<br>🎯 Goal: >95%       |
+| Giai đoạn             | Câu hỏi nghiên cứu               | Kết quả chính            |
+| --------------------- | -------------------------------- | ------------------------ |
+| **🎯 ĐACS (Q2/2025)** | BERT có tốt hơn CNN/LSTM?        | ✅ **+20% accuracy**<br> |
+| **🚀 ĐACN (Q4/2025)** | BERT có chống được obfuscation?  | ✅ **94.3% success**<br> |
+| **🔬 NCKH (2025+)**   | FCG/BCG có vượt static analysis? | 🔄 **In progress**<br>   |
 
 ## Tại sao tôi tạo blog này?
 
-Blog này không chỉ là nơi hoàn thành yêu cầu môn học, mà là bước đầu tiên trong hành trình rèn luyện kỹ năng truyền đạt để trở thành giảng viên Security.
+Blog này là bước đầu rèn luyện kỹ năng truyền đạt - một phần quan trọng nếu muốn chia sẻ kiến thức trong tương lai.
 
 **Bạn sẽ tìm thấy ở đây:**
 
@@ -177,31 +166,6 @@ Blog này không chỉ là nơi hoàn thành yêu cầu môn học, mà là bư�
 - Kiến thức phức tạp được giải thích dễ hiểu
 
 Mục tiêu của tôi là biến những khái niệm về Cybersecurity, AI và Machine Learning thành những câu chuyện thú vị mà bất kỳ ai cũng có thể hiểu được.
-
----
-
-## Lộ trình phát triển
-
-**2025 - Bước ngoặt**
-
-- Q2: Top 1 ĐACS (9.0/10)
-- Q4: Approved ĐACN & NCKH first try
-- Hiện tại: Deep dive vào AI Security với Transformer Networks
-
-**Mục tiêu 2025**
-
-- Hoàn thành xuất sắc ĐACN & NCKH
-- Hoàn thành Google Cybersecurity Certificate
-- Tìm cơ hội thực tập tại công ty AI/Security
-- Publish research findings và xây dựng portfolio
-
-**Tầm nhìn dài hạn (2026+)**
-
-- Tốt nghiệp với thành tích xuất sắc
-- Đạt chứng chỉ CompTIA Security+
-- Làm việc full-time trong lĩnh vực AI Security
-- Trở thành giảng viên Cybersecurity
-- Speaker tại các sự kiện tech Việt Nam
 
 ---
 
