@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Blog Của Híu</title>
+    <link>http://localhost:1313/myblog/tags/about/</link>
+    <description>Recent content in About on Blog Của Híu</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/myblog/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giới thiệu</title>
+      <link>http://localhost:1313/myblog/about/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/myblog/about/</guid>
+      <description>&lt;h1 id=&#34;xin-chào-tôi-là-tiết-thanh-minh-hiếu&#34;&gt;Xin chào! Tôi là Tiết Thanh Minh Hiếu&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;AI Security Researcher&lt;/strong&gt; | Sinh viên CNTT K22, HUTECH&lt;/p&gt;&#xA;&lt;p&gt;Từ một sinh viên CNTT thông thường, tôi đã tìm thấy niềm đam mê thực sự tại giao điểm giữa AI và Cybersecurity. Hành trình của tôi không chỉ là về code và thuật toán, mà còn là về việc bảo vệ thế giới số bằng công nghệ tiên tiến.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformer on HiuLab</title>
+    <link>https://blog-lap-trinh-mang.vercel.app/tags/transformer/</link>
+    <description>Recent content in Transformer on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 07 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog-lap-trinh-mang.vercel.app/tags/transformer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Đồ án Cơ sở: Khi BERT &#39;hiểu&#39; mã độc tốt hơn con người</title>
+      <link>https://blog-lap-trinh-mang.vercel.app/blog/16-dacs-bert-malware-detection/</link>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog-lap-trinh-mang.vercel.app/blog/16-dacs-bert-malware-detection/</guid>
+      <description>&lt;p&gt;Mình vẫn nhớ khoảnh khắc đầu tiên khi mô hình BERT chạy xong epoch cuối cùng và hiển thị &lt;strong&gt;accuracy 94%&lt;/strong&gt;.&lt;br&gt;&#xA;Đó là lúc mình nhận ra: &lt;strong&gt;AI không chỉ “dự đoán dữ liệu” – mà còn có thể “hiểu ngữ cảnh” của mã độc.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

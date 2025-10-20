@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debug on HiuLab</title>
+    <link>https://blog-lap-trinh-mang.vercel.app/tags/debug/</link>
+    <description>Recent content in Debug on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 02 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog-lap-trinh-mang.vercel.app/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lỗi logic trong JavaScript: Khi code chạy đúng mà sai</title>
+      <link>https://blog-lap-trinh-mang.vercel.app/blog/11-javascript-logic-errors/</link>
+      <pubDate>Thu, 02 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog-lap-trinh-mang.vercel.app/blog/11-javascript-logic-errors/</guid>
+      <description>&lt;p&gt;Khi học JavaScript, có lẽ ai cũng từng trải qua cảm giác này:&lt;br&gt;&#xA;&lt;strong&gt;Code chạy được, không báo lỗi, nhưng kết quả lại chẳng đúng như mong đợi.&lt;/strong&gt;&lt;br&gt;&#xA;Đó chính là loại lỗi “đáng sợ” nhất – &lt;strong&gt;logic error&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
