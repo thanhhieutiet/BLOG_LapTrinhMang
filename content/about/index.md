@@ -1,5 +1,6 @@
 ---
-title: "Tiết Thanh Minh Hiếu - AI Security Researcher"
+title: "Tiết Thanh Minh Hiếu"
+description: "Compare yourself to yesterday, not to someone else today"
 date: 2025-09-21
 weight: 1
 type: "page" # ← QUAN TRỌNG
