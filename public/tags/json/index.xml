@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on HiuLab</title>
+    <link>http://localhost:1313/tags/json/</link>
+    <description>Recent content in Json on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 04 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON, API và giao tiếp dữ liệu: Khi JavaScript nói chuyện với thế giới</title>
+      <link>http://localhost:1313/blog/13-json-api-communication/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/13-json-api-communication/</guid>
+      <description>&lt;p&gt;Một trong những khoảnh khắc khiến mình “ngộ” ra sức mạnh thực sự của JavaScript,&lt;br&gt;&#xA;là khi nhận ra ngôn ngữ này không chỉ chạy trong trình duyệt – mà còn &lt;strong&gt;nói chuyện với cả thế giới&lt;/strong&gt; thông qua &lt;strong&gt;API&lt;/strong&gt; và &lt;strong&gt;JSON&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

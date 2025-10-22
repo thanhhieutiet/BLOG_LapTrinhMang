@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Es6 on HiuLab</title>
+    <link>http://localhost:1313/tags/es6/</link>
+    <description>Recent content in Es6 on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Mon, 22 Jan 2024 09:15:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript ES6&#43;: Những tính năng đã thay đổi cách mình code</title>
+      <link>http://localhost:1313/blog/3-javascript-es6&#43;/</link>
+      <pubDate>Mon, 22 Jan 2024 09:15:00 +0700</pubDate>
+      <guid>http://localhost:1313/blog/3-javascript-es6&#43;/</guid>
+      <description>&lt;p&gt;Chào mọi người! Khi mới học JavaScript, mình chỉ biết đến cú pháp cũ ES5. Nhưng khi tiếp xúc với ES6+ (ES2015 trở lên), thật sự mình cảm thấy như được &amp;ldquo;khai sáng&amp;rdquo;. Hôm nay mình muốn chia sẻ những tính năng ES6+ đã thay đổi hoàn toàn cách mình viết JavaScript.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spring Boot vs Node.js: Trải nghiệm backend development của mình | HiuLab</title>
+
+<meta name="description" content="So sánh thực tế giữa Spring Boot và Node.js qua kinh nghiệm làm dự án backend">
+    <link rel="stylesheet" href="/css/main.css">
+
+<link rel="icon" type="image/svg+xml" href="http://localhost:1313/favicon.svg"> 
+<link rel="icon" type="image/x-icon" href="http://localhost:1313/favicon.ico"> 
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32.png"> 
+<link rel="icon" type="image/png" sizes="64x64" href="http://localhost:1313/favicon-64.png"> 
+
+  </head>
+  <body class="m-0 p-0">
+    <header class="py-6 border-b"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex flex-col">
+  <div class="flex items-center">
+    <div class="flex items-center">
+      <button
+        class="flex items-center space-x-2 rounded-full border py-1 pr-[5px] pl-3 group bg-zinc-100 hover:bg-zinc-200 toggle-button"
+        data-target="menu-bar"
+      >
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          ></path>
+        </svg>
+        <span class="bg-blue-500 fill-white rounded-full p-1.5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            fill="currentColor"
+            class="group-hover:animate-spin bi bi-egg-fried fill-white"
+            viewBox="0 0 16 16"
+          >
+            <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+            <path
+              d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="relative rounded-full py-1.5 px-6 bg-zinc-100 hover:bg-zinc-200 text-xl font-bold uppercase mx-2"
+      >
+        
+        <h2>
+          <a
+            class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto"
+            href="http://localhost:1313/"
+            >HiuLab</a
+          >
+        </h2>
+        
+      </div>
+    </div>
+
+    <div class="flex items-center ml-auto">
+      <button
+        class="flex items-center rounded-full p-3 bg-zinc-100 hover:bg-zinc-200 toggle-button"
+        data-target="search-bar"
+      >
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+          <path
+            id="path1"
+            class="transition-all ease-linear"
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+          ></path>
+          <path
+            id="path2"
+            class="transition-all ease-linear hidden"
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav id="menu-bar" class="mt-3 close transition-all duration-300">
+    <ul class="flex items-center flex flex-nowrap whitespace-nowrap overflow-x-auto space-x-4">
+    
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/">Trang chủ</a>
+    </li>
+    
+    <li class="my-2">
+      <a aria-current="page" class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200 border-zinc-400" href="/blog/">Bài viết</a>
+    </li>
+    
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/categories/">Danh mục</a>
+    </li>
+    
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Thẻ</a>
+    </li>
+    
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/about/">Về tôi</a>
+    </li>
+    
+    <li class="my-2">
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/contact/">Liên hệ</a>
+    </li>
+    </ul>
+  </nav><div id="search-bar" class="mt-3 close transition-all duration-300">
+  <form id="search" class="flex items-stretch">
+    <input
+      class="w-full block px-6 py-2 rounded-l-full focus:outline-none border border-zinc-200"
+      type="text"
+      placeholder="Search..."
+    />
+    <button
+      class="flex items-center px-7 py-2.5 rounded-r-full border border-zinc-200"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        fill="currentColor"
+        class="group-hover:animate-pulse"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+        ></path>
+      </svg>
+    </button>
+  </form>
+</div>
+</div>
+</header>
+    <main
+      class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 mt-8"
+    ><div id="breadcrumb" class="max-w-7xl mx-auto py-8">
+	<ul class="flex space-x-4 text-sm text-zinc-500">
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="http://localhost:1313/">HiuLab</a>
+		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="http://localhost:1313/blog/">Blogs</a>
+		</li>
+	</ul>
+</div><div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+  <article class="md:col-span-2 prose lg:prose-lg">
+    <header class="not-prose">
+      <h1 id="title" class="text-4xl font-bold leading-normal">Spring Boot vs Node.js: Trải nghiệm backend development của mình</h1>
+
+      <div id="lead" class="my-6">
+        <p class="font-bold">So sánh thực tế giữa Spring Boot và Node.js qua kinh nghiệm làm dự án backend</p>
+      </div>
+
+      <div id="writer" class="flex items-center space-x-4">
+
+        <img
+          class="w-12 h-12 bg-black rounded-full"
+          src="http://localhost:1313/images/avatar_2.png"
+          alt="Tiết Thanh Minh Hiếu avatar"
+          width="1081"
+          height="1079"
+        />
+
+        <ul
+          class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto"
+        >
+          <li class="font-semibold my-2">Tiết Thanh Minh Hiếu</li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2"><time datetime="2024-01-25T16:20:00&#43;07:00">25 tháng 01, 2024</time>
+          </li>
+
+          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+            5 phút đọc
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <figure id="featureimage" class="rounded-xl aspect-video">
+      <img
+        class="rounded-lg"
+        src="http://localhost:1313/blog/6-springboot-vs-nodejs/thumbnail_hu_7e413ff8ab980dbb.png"
+        alt=""
+        width="750"
+        height="422"
+      />
+    </figure>
+
+    <div id="content" class="mb-14">
+      <p>Xin chào các bạn! Sau khi học cả Java và JavaScript, mình có cơ hội làm việc với cả Spring Boot và Node.js trong các dự án thực tế. Hôm nay mình muốn chia sẻ trải nghiệm của mình khi develop backend với hai platform này.</p>
+<h2 id="dự-án-đầu-tiên-với-spring-boot-">Dự án đầu tiên với Spring Boot 🍃</h2>
+<h3 id="setup-ban-đầu">Setup ban đầu</h3>
+<p>Khi mới bắt đầu với Spring Boot, mình cảm thấy hơi choáng với số lượng config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Application.java</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootApplication</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BlogApplication</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        SpringApplication.<span style="color:#a6e22e">run</span>(BlogApplication.<span style="color:#a6e22e">class</span>, args);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// User.java - JPA Entity</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Entity</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Table</span>(name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;users&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Id</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GeneratedValue</span>(strategy <span style="color:#f92672">=</span> GenerationType.<span style="color:#a6e22e">IDENTITY</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Long id;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Column</span>(nullable <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>, unique <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String email;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Column</span>(nullable <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String password;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Constructor, getters, setters...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// UserRepository.java</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Repository</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserRepository</span> <span style="color:#66d9ef">extends</span> JpaRepository<span style="color:#f92672">&lt;</span>User, Long<span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>    Optional<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">findByEmail</span>(String email);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// UserController.java</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span>(<span style="color:#e6db74">&#34;/api/users&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> UserService userService;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@PostMapping</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">createUser</span>(<span style="color:#a6e22e">@Valid</span> <span style="color:#a6e22e">@RequestBody</span> UserDTO userDTO) {
+</span></span><span style="display:flex;"><span>        User user <span style="color:#f92672">=</span> userService.<span style="color:#a6e22e">createUser</span>(userDTO);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">status</span>(HttpStatus.<span style="color:#a6e22e">CREATED</span>).<span style="color:#a6e22e">body</span>(user);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="những-điều-mình-thích-ở-spring-boot">Những điều mình thích ở Spring Boot:</h3>
+<ol>
+<li><strong>Convention over Configuration</strong> - Ít config hơn Spring truyền thống</li>
+<li><strong>Dependency Injection</strong> - Auto-wiring cực kỳ mạnh mẽ</li>
+<li><strong>JPA/Hibernate</strong> - ORM mạnh mẽ, query phức tạp dễ dàng</li>
+<li><strong>Security</strong> - Spring Security handle authentication/authorization tốt</li>
+<li><strong>Testing</strong> - Test infrastructure rất complete</li>
+</ol>
+<h3 id="những-khó-khăn">Những khó khăn:</h3>
+<ol>
+<li><strong>Learning curve</strong> - Cần hiểu về Spring ecosystem</li>
+<li><strong>Memory usage</strong> - JVM khá &ldquo;nặng&rdquo;</li>
+<li><strong>Startup time</strong> - Khởi động chậm hơn Node.js</li>
+<li><strong>Annotation hell</strong> - Quá nhiều annotation có thể confusing</li>
+</ol>
+<h2 id="chuyển-sang-nodejs---một-thế-giới-khác-">Chuyển sang Node.js - Một thế giới khác 🚀</h2>
+<h3 id="expressjs-setup">Express.js setup</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// app.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;express&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mongoose</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;mongoose&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bcrypt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;bcryptjs&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jwt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;jsonwebtoken&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">express</span>.<span style="color:#a6e22e">json</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// User Model với Mongoose
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">userSchema</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">Schema</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String, <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">unique</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String, <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">createdAt</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> Date, <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span> },
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mongoose</span>.<span style="color:#a6e22e">model</span>(<span style="color:#e6db74">&#34;User&#34;</span>, <span style="color:#a6e22e">userSchema</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// User Routes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#34;/api/users&#34;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">password</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">existingUser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">User</span>.<span style="color:#a6e22e">findOne</span>({ <span style="color:#a6e22e">email</span> });
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">existingUser</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">400</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;User already exists&#34;</span> });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hashedPassword</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">bcrypt</span>.<span style="color:#a6e22e">hash</span>(<span style="color:#a6e22e">password</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>({ <span style="color:#a6e22e">email</span>, <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hashedPassword</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">save</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">201</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">_id</span>, <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">email</span> });
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span> });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Connect to MongoDB
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">mongoose</span>
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">connect</span>(<span style="color:#e6db74">&#34;mongodb://localhost:27017/myapp&#34;</span>)
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Connected to MongoDB&#34;</span>))
+</span></span><span style="display:flex;"><span>  .<span style="color:#66d9ef">catch</span>((<span style="color:#a6e22e">err</span>) =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;MongoDB connection error:&#34;</span>, <span style="color:#a6e22e">err</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">3000</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Server running on port 3000&#34;</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h3 id="những-điều-mình-thích-ở-nodejs">Những điều mình thích ở Node.js:</h3>
+<ol>
+<li><strong>Fast development</strong> - Viết code nhanh, setup đơn giản</li>
+<li><strong>JavaScript everywhere</strong> - Same language frontend/backend</li>
+<li><strong>NPM ecosystem</strong> - Package có sẵn cho mọi thứ</li>
+<li><strong>Lightweight</strong> - Memory footprint nhỏ hơn JVM</li>
+<li><strong>Fast startup</strong> - Server khởi động trong giây lát</li>
+</ol>
+<h3 id="những-thách-thức">Những thách thức:</h3>
+<ol>
+<li><strong>Callback/Promise hell</strong> - Nếu không handle tốt async code</li>
+<li><strong>Single-threaded</strong> - CPU-intensive tasks có thể block</li>
+<li><strong>Type safety</strong> - JavaScript dynamic typing đôi khi gây bugs</li>
+<li><strong>Package management</strong> - Dependency hell với npm</li>
+</ol>
+<h2 id="so-sánh-thực-tế-qua-dự-án">So sánh thực tế qua dự án</h2>
+<h3 id="dự-án-e-commerce-platform">Dự án E-commerce Platform</h3>
+<p>Mình đã implement cùng một API cho hệ thống e-commerce với cả hai technologies:</p>
+<h4 id="performance-test-results">Performance Test Results:</h4>
+<pre tabindex="0"><code>Concurrent Users: 1000
+Test Duration: 5 minutes
+
+Spring Boot (Java 17 + PostgreSQL):
+- Average Response Time: 45ms
+- Throughput: 2,200 req/sec
+- Memory Usage: 512MB
+- CPU Usage: 35%
+
+Node.js (Express + MongoDB):
+- Average Response Time: 38ms
+- Throughput: 2,800 req/sec
+- Memory Usage: 128MB
+- CPU Usage: 28%
+</code></pre><h4 id="development-speed">Development Speed:</h4>
+<p><strong>Spring Boot:</strong></p>
+<ul>
+<li>Setup time: 30 phút (config database, dependencies)</li>
+<li>CRUD operations: 2 giờ</li>
+<li>Authentication: 1 giờ (Spring Security)</li>
+<li>Unit tests: 1.5 giờ</li>
+<li><strong>Total: ~5 giờ</strong></li>
+</ul>
+<p><strong>Node.js:</strong></p>
+<ul>
+<li>Setup time: 10 phút</li>
+<li>CRUD operations: 1 giờ</li>
+<li>Authentication: 1.5 giờ (custom JWT)</li>
+<li>Unit tests: 1 giờ</li>
+<li><strong>Total: ~3.5 giờ</strong></li>
+</ul>
+<h2 id="khi-nào-dùng-gì">Khi nào dùng gì?</h2>
+<h3 id="chọn-spring-boot-khi">Chọn Spring Boot khi:</h3>
+<p>✅ <strong>Enterprise applications</strong> - Cần security, scalability cao<br>
+✅ <strong>Complex business logic</strong> - Nhiều rules phức tạp<br>
+✅ <strong>Team lớn</strong> - Structure rõ ràng, maintainable<br>
+✅ <strong>Legacy systems</strong> - Integration với Java ecosystem<br>
+✅ <strong>Microservices</strong> - Spring Cloud ecosystem mạnh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Example: Complex business logic dễ handle với Java</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Transactional</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OrderService</span> {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Order <span style="color:#a6e22e">processOrder</span>(OrderRequest request) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Validate inventory</span>
+</span></span><span style="display:flex;"><span>        inventoryService.<span style="color:#a6e22e">checkAvailability</span>(request.<span style="color:#a6e22e">getItems</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Apply discounts</span>
+</span></span><span style="display:flex;"><span>        BigDecimal finalAmount <span style="color:#f92672">=</span> pricingService
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">calculateDiscount</span>(request, customer.<span style="color:#a6e22e">getTier</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Process payment</span>
+</span></span><span style="display:flex;"><span>        PaymentResult payment <span style="color:#f92672">=</span> paymentService
+</span></span><span style="display:flex;"><span>            .<span style="color:#a6e22e">processPayment</span>(customer.<span style="color:#a6e22e">getPaymentMethod</span>(), finalAmount);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (payment.<span style="color:#a6e22e">isSuccessful</span>()) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Create order</span>
+</span></span><span style="display:flex;"><span>            Order order <span style="color:#f92672">=</span> orderRepository.<span style="color:#a6e22e">save</span>(
+</span></span><span style="display:flex;"><span>                Order.<span style="color:#a6e22e">builder</span>()
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">customerId</span>(customer.<span style="color:#a6e22e">getId</span>())
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">amount</span>(finalAmount)
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">status</span>(OrderStatus.<span style="color:#a6e22e">CONFIRMED</span>)
+</span></span><span style="display:flex;"><span>                    .<span style="color:#a6e22e">build</span>()
+</span></span><span style="display:flex;"><span>            );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Send notifications</span>
+</span></span><span style="display:flex;"><span>            notificationService.<span style="color:#a6e22e">sendOrderConfirmation</span>(order);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> order;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> PaymentProcessingException(<span style="color:#e6db74">&#34;Payment failed&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="chọn-nodejs-khi">Chọn Node.js khi:</h3>
+<p>✅ <strong>Rapid prototyping</strong> - Cần develop nhanh<br>
+✅ <strong>Real-time apps</strong> - Chat, live updates (Socket.io)<br>
+✅ <strong>API-first approach</strong> - RESTful APIs đơn giản<br>
+✅ <strong>Startup/Small team</strong> - Ít developers, cần flexibility<br>
+✅ <strong>I/O intensive</strong> - Nhiều database calls, external APIs</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example: Real-time chat với Socket.io
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">io</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;socket.io&#34;</span>)(<span style="color:#a6e22e">server</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;connection&#34;</span>, (<span style="color:#a6e22e">socket</span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;User connected:&#34;</span>, <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;join-room&#34;</span>, (<span style="color:#a6e22e">roomId</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">roomId</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">to</span>(<span style="color:#a6e22e">roomId</span>).<span style="color:#a6e22e">emit</span>(<span style="color:#e6db74">&#34;user-joined&#34;</span>, <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;message&#34;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">data</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Save to database
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">Message</span>.<span style="color:#a6e22e">create</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">message</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">userId</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">roomId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">roomId</span>,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Broadcast to room
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">to</span>(<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">roomId</span>).<span style="color:#a6e22e">emit</span>(<span style="color:#e6db74">&#34;new-message&#34;</span>, <span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;disconnect&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;User disconnected:&#34;</span>, <span style="color:#a6e22e">socket</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="1-không-có-silver-bullet">1. Không có &ldquo;silver bullet&rdquo;</h3>
+<p>Cả hai đều có ưu nhược điểm. Quan trọng là chọn tool phù hợp với requirements.</p>
+<h3 id="2-team-skill-matter">2. Team skill matter</h3>
+<ul>
+<li>Team giỏi Java → Spring Boot sẽ productive hơn</li>
+<li>Team frontend developers → Node.js dễ tiếp cận hơn</li>
+</ul>
+<h3 id="3-maintenance-is-key">3. Maintenance is key</h3>
+<p>Spring Boot có structure rõ ràng hơn cho long-term projects.</p>
+<h3 id="4-performance-isnt-everything">4. Performance isn&rsquo;t everything</h3>
+<p>Developer productivity và time-to-market cũng quan trọng.</p>
+<h2 id="kết-luận">Kết luận</h2>
+<p>Sau kinh nghiệm với cả hai, mình nhận ra:</p>
+<p><strong>Spring Boot</strong> giống như một chiếc <strong>Mercedes</strong> - robust, reliable, powerful nhưng cần thời gian để master.</p>
+<p><strong>Node.js</strong> giống như một chiếc <strong>motorbike</strong> - agile, fast, flexible nhưng cần cẩn thận khi handle complex scenarios.</p>
+<p>Hiện tại mình đang sử dụng:</p>
+<ul>
+<li><strong>Spring Boot</strong> cho enterprise projects, complex business logic</li>
+<li><strong>Node.js</strong> cho prototypes, real-time features, simple APIs</li>
+</ul>
+<p>Các bạn có kinh nghiệm gì với hai platform này? Share ở comment nhé!</p>
+<hr>
+<p><em>Choose the right tool for the job! 🛠️</em></p>
+<div class="mt-8 pt-6 border-t border-gray-200 not-prose">
+  <h3 class="text-lg font-bold text-gray-900 mb-4">Chủ đề</h3>
+
+  <div class="flex flex-wrap items-center gap-3"><a
+      href="http://localhost:1313/categories/programming/"
+      class="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-700 border border-blue-200 hover:from-blue-100 hover:to-indigo-100 hover:border-blue-300 hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"
+    >
+      <svg
+        class="w-4 h-4 group-hover:scale-110 transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+        ></path>
+      </svg>
+      <span>Programming</span>
+    </a></div>
+</div><div class="mt-6 not-prose">
+  <div class="flex flex-wrap items-center gap-2">
+    <span class="text-sm font-medium text-gray-500">Tags:</span><a
+      href="http://localhost:1313/tags/java/"
+      class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-200"
+    >
+      #Java
+    </a><a
+      href="http://localhost:1313/tags/javascript/"
+      class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-200"
+    >
+      #Javascript
+    </a></div>
+</div></div>
+
+    <footer id="content-footer" class="not-prose">
+      
+
+      <div
+        id="author-box"
+        class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl"
+      >
+        <img
+          class="w-20 h-20 rounded-full"
+          src="http://localhost:1313/images/avatar_2.png"
+          alt="Tiết Thanh Minh Hiếu"
+        />
+        <h2 class="text-xl font-bold my-4">
+          Tác giả: Tiết Thanh Minh Hiếu
+        </h2>
+
+        <p class="mb-4">Từ một sinh viên CNTT, tôi đã tìm thấy niềm đam mê thực sự tại giao điểm giữa AI và Cybersecurity.</p>
+
+        <ul class="flex flex-wrap space-x-4">
+          
+          <li>
+            <a
+              class="flex items-center decoration-auto hover:underline"
+              href="https://www.github.com/thanhhieutiet"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+              <span class="ml-2">GitHub</span>
+            </a>
+          </li>
+          
+          <li>
+            <a
+              class="flex items-center decoration-auto hover:underline"
+              href="https://www.facebook.com/thanhieu.pir"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                />
+              </svg>
+              <span class="ml-2">Facebook</span>
+            </a>
+          </li>
+          
+          <li>
+            <a
+              class="flex items-center decoration-auto hover:underline"
+              href="mailto:thanhhieutiet@gmail.com"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 4.793c0-.82-.524-1.374-1.562-1.374H1.562C.524 3.419 0 3.973 0 4.793v6.414c0 .82.524 1.374 1.562 1.374h12.876c1.038 0 1.562-.554 1.562-1.374V4.793Zm-2 1.066L8 8.881l-6-3.022v-.066h12Z"
+                />
+              </svg>
+              <span class="ml-2">Email</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="related-post" class="">
+        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">
+          Bài viết khác
+        </h2><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><article class="relative group bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="http://localhost:1313/blog/3-javascript-es6&#43;/"></a>
+
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl"><img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="http://localhost:1313/blog/3-javascript-es6&#43;/thumbnail_hu_62a726d5ac56f274.png" alt="JavaScript ES6&#43;: Những tính năng đã thay đổi cách mình code" width="750" height="422">
+
+	  </figure>
+
+	<div class="p-6">
+
+		<time datetime="2024-01-22T09:15:00&#43;07:00">22 tháng 01, 2024</time>
+
+		<h3 class="my-4 text-2xl font-bold">JavaScript ES6&#43;: Những tính năng đã thay đổi cách mình code</h3>
+
+		<p class="text-normal leading-normal text-zinc-500 line-clamp-2">Khám phá những tính năng ES6&#43; đã cách mạng hóa cách viết JavaScript của mình</p>
+
+	</div>
+</article>
+        </div>
+      </div>
+    </footer>
+  </article>
+
+  
+  <aside class="md:col-span-1"><div class="lg:sticky lg:top-8"><!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Banner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-out;
+      }
+      .quote-mark {
+        font-family: Georgia, serif;
+        font-size: 3rem;
+        line-height: 0;
+        opacity: 0.15;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 p-8">
+    
+    <div
+      id="quoteBanner"
+      class="mb-8 relative overflow-hidden rounded-2xl shadow-sm bg-white border border-gray-100 p-6 fade-in"
+    >
+      
+      <div
+        class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"
+      ></div>
+
+      
+      <div class="relative z-10">
+        
+        <div class="quote-mark text-blue-600 mb-2">"</div>
+
+        
+        <blockquote
+          id="quoteText"
+          class="text-gray-700 text-base md:text-lg font-medium mb-3 leading-relaxed"
+        >
+          
+        </blockquote>
+
+        
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <cite
+            id="quoteAuthor"
+            class="text-gray-600 text-sm not-italic font-semibold"
+          >
+            
+          </cite>
+
+          
+          <button
+            onclick="loadNewQuote()"
+            class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded-lg transition-all duration-300 flex items-center gap-2 text-sm font-medium border border-gray-200"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+              ></path>
+            </svg>
+            Quote khác
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const quotes = [
+        {
+          text: "Lập trình không phải là về những gì bạn biết, mà là về những gì bạn có thể tìm ra.",
+          author: "Chris Pine",
+        },
+        {
+          text: "Code giống như sự hài hước. Khi bạn phải giải thích nó, có nghĩa là nó đã tệ rồi.",
+          author: "Cory House",
+        },
+        {
+          text: "Trước tiên, hãy giải quyết vấn đề. Sau đó mới viết code.",
+          author: "John Johnson",
+        },
+        {
+          text: "Thông báo lỗi tốt nhất là thông báo không bao giờ xuất hiện.",
+          author: "Thomas Fuchs",
+        },
+        {
+          text: "Cách duy nhất để học một ngôn ngữ lập trình mới là viết chương trình bằng nó.",
+          author: "Dennis Ritchie",
+        },
+        {
+          text: "Code không bao giờ nói dối, nhưng comment thì có thể.",
+          author: "Ron Jeffries",
+        },
+        {
+          text: "Sự đơn giản là linh hồn của hiệu quả.",
+          author: "Austin Freeman",
+        },
+        {
+          text: "Làm cho nó chạy được, làm cho nó đúng, làm cho nó nhanh.",
+          author: "Kent Beck",
+        },
+        {
+          text: "Bất kỳ kẻ ngu nào cũng có thể viết code mà máy tính hiểu được. Lập trình viên giỏi viết code mà con người có thể hiểu được.",
+          author: "Martin Fowler",
+        },
+        {
+          text: "Máy tính sinh ra để giải quyết những vấn đề không tồn tại trước đó.",
+          author: "Bill Gates",
+        },
+        {
+          text: "Nói thì dễ. Hãy cho tôi xem code.",
+          author: "Linus Torvalds",
+        },
+        {
+          text: "Lập trình là nghệ thuật nói với con người khác những gì bạn muốn máy tính làm.",
+          author: "Donald Knuth",
+        },
+        {
+          text: "Đôi khi việc ở lại trên giường vào thứ Hai tốt hơn là dành cả tuần để debug code của ngày thứ Hai.",
+          author: "Dan Salomon",
+        },
+        {
+          text: "Hoàn hảo là kẻ thù của tốt.",
+          author: "Voltaire",
+        },
+        {
+          text: "Đó không phải là bug - đó là một tính năng chưa được ghi chép.",
+          author: "Anonymous",
+        },
+        {
+          text: "Debug khó hơn gấp đôi so với viết code. Vì vậy, nếu bạn viết code thông minh nhất có thể, bạn sẽ không đủ thông minh để debug nó.",
+          author: "Brian Kernighan",
+        },
+        {
+          text: "Đừng comment code tệ - hãy viết lại nó.",
+          author: "Brian Kernighan",
+        },
+        {
+          text: "Kinh nghiệm là tên chúng ta đặt cho những sai lầm của mình.",
+          author: "Oscar Wilde",
+        },
+      ];
+
+      let currentQuoteIndex = -1;
+
+      function getRandomQuote() {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * quotes.length);
+        } while (newIndex === currentQuoteIndex && quotes.length > 1);
+
+        currentQuoteIndex = newIndex;
+        return quotes[newIndex];
+      }
+
+      function displayQuote(quote) {
+        document.getElementById("quoteText").textContent = quote.text;
+        document.getElementById("quoteAuthor").textContent =
+          "— " + quote.author;
+      }
+
+      function loadNewQuote() {
+        const banner = document.getElementById("quoteBanner");
+        banner.classList.remove("fade-in");
+
+        setTimeout(() => {
+          const quote = getRandomQuote();
+          displayQuote(quote);
+          banner.classList.add("fade-in");
+        }, 100);
+      }
+
+      
+      window.addEventListener("DOMContentLoaded", () => {
+        const quote = getRandomQuote();
+        displayQuote(quote);
+      });
+    </script>
+  </body>
+</html>
+
+  <div class="lg:sticky lg:top-8">
+    
+<div class="space-y-6 mb-8">
+  <h2 class="font-bold text-xl mb-4">Chủ đề</h2>
+  <ul class="space-y-2">
+    
+      <li>
+        <a href="/categories/ai/" 
+           class="group flex items-center justify-between p-3 rounded-lg border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" 
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="font-medium text-gray-700 group-hover:text-blue-700">ai</span>
+          </div>
+          <span class="text-sm text-gray-600 bg-gray-100 group-hover:bg-blue-100 px-3 py-1 rounded-full font-medium">
+            2
+          </span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories/programming/" 
+           class="group flex items-center justify-between p-3 rounded-lg border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" 
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="font-medium text-gray-700 group-hover:text-blue-700">programming</span>
+          </div>
+          <span class="text-sm text-gray-600 bg-gray-100 group-hover:bg-blue-100 px-3 py-1 rounded-full font-medium">
+            15
+          </span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories/research/" 
+           class="group flex items-center justify-between p-3 rounded-lg border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" 
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="font-medium text-gray-700 group-hover:text-blue-700">research</span>
+          </div>
+          <span class="text-sm text-gray-600 bg-gray-100 group-hover:bg-blue-100 px-3 py-1 rounded-full font-medium">
+            3
+          </span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/categories/security/" 
+           class="group flex items-center justify-between p-3 rounded-lg border border-gray-200 hover:border-blue-400 hover:bg-blue-50 transition-all duration-200">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" 
+                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+            </svg>
+            <span class="font-medium text-gray-700 group-hover:text-blue-700">security</span>
+          </div>
+          <span class="text-sm text-gray-600 bg-gray-100 group-hover:bg-blue-100 px-3 py-1 rounded-full font-medium">
+            4
+          </span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+    <div class="space-y-6">
+      <h2 class="font-bold text-xl mb-4">Bài viết mới</h2>
+      
+<article
+  class="relative group flex flex-row items-center mb-4 hover:bg-gray-50 p-2 rounded-xl transition"
+>
+  
+  <a
+    class="absolute inset-0 z-10"
+    href="http://localhost:1313/about/"
+    aria-label="Tiết Thanh Minh Hiếu - Compare yourself to who you were yesterday, not to who someone else is today"
+  ></a>
+
+  
+  <figure
+    class="w-32 aspect-video overflow-hidden rounded-2xl bg-zinc-100 flex-shrink-0"
+  >
+    <img
+      class="object-cover h-full w-full group-hover:scale-105 transition duration-500"
+      src="http://localhost:1313/about/Poster_ABM_ILIMG_hu_48002c01d6494ebf.png"
+      alt="Poster_ABM_ILIMG.png"
+      width="320"
+      height="180"
+      loading="lazy"
+    />
+  </figure>
+
+  
+  <div class="basis-2/3 self-center ml-4">
+    <h3
+      class="font-bold text-sm leading-tight line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors pointer-events-none"
+    >
+      Tiết Thanh Minh Hiếu - Compare yourself to who you were yesterday, not to who someone else is today
+    </h3>
+    <time class="text-xs text-gray-500 font-medium pointer-events-none">
+      Sep 21, 2025
+    </time>
+  </div>
+</article>
+
+<article
+  class="relative group flex flex-row items-center mb-4 hover:bg-gray-50 p-2 rounded-xl transition"
+>
+  
+  <a
+    class="absolute inset-0 z-10"
+    href="http://localhost:1313/blog/14-performance-101/"
+    aria-label="Performance 101: Vì sao JavaScript chậm – và cách mình tối ưu code web"
+  ></a>
+
+  
+  <figure
+    class="w-32 aspect-video overflow-hidden rounded-2xl bg-zinc-100 flex-shrink-0"
+  >
+    <img
+      class="object-cover h-full w-full group-hover:scale-105 transition duration-500"
+      src="http://localhost:1313/blog/14-performance-101/thumbnail_hu_f1c7f6b7172e4838.png"
+      alt="thumbnail.png"
+      width="320"
+      height="180"
+      loading="lazy"
+    />
+  </figure>
+
+  
+  <div class="basis-2/3 self-center ml-4">
+    <h3
+      class="font-bold text-sm leading-tight line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors pointer-events-none"
+    >
+      Performance 101: Vì sao JavaScript chậm – và cách mình tối ưu code web
+    </h3>
+    <time class="text-xs text-gray-500 font-medium pointer-events-none">
+      Sep 05, 2025
+    </time>
+  </div>
+</article>
+
+<article
+  class="relative group flex flex-row items-center mb-4 hover:bg-gray-50 p-2 rounded-xl transition"
+>
+  
+  <a
+    class="absolute inset-0 z-10"
+    href="http://localhost:1313/blog/13-json-api-communication/"
+    aria-label="JSON, API và giao tiếp dữ liệu: Khi JavaScript nói chuyện với thế giới"
+  ></a>
+
+  
+  <figure
+    class="w-32 aspect-video overflow-hidden rounded-2xl bg-zinc-100 flex-shrink-0"
+  >
+    <img
+      class="object-cover h-full w-full group-hover:scale-105 transition duration-500"
+      src="http://localhost:1313/blog/13-json-api-communication/thumbnail_hu_7dba903cec7d41b1.png"
+      alt="thumbnail.png"
+      width="320"
+      height="180"
+      loading="lazy"
+    />
+  </figure>
+
+  
+  <div class="basis-2/3 self-center ml-4">
+    <h3
+      class="font-bold text-sm leading-tight line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors pointer-events-none"
+    >
+      JSON, API và giao tiếp dữ liệu: Khi JavaScript nói chuyện với thế giới
+    </h3>
+    <time class="text-xs text-gray-500 font-medium pointer-events-none">
+      Sep 04, 2025
+    </time>
+  </div>
+</article>
+
+<article
+  class="relative group flex flex-row items-center mb-4 hover:bg-gray-50 p-2 rounded-xl transition"
+>
+  
+  <a
+    class="absolute inset-0 z-10"
+    href="http://localhost:1313/blog/12-prototype-and-class/"
+    aria-label="Prototype, Class và Kế thừa: JavaScript thực sự hoạt động như thế nào?"
+  ></a>
+
+  
+  <figure
+    class="w-32 aspect-video overflow-hidden rounded-2xl bg-zinc-100 flex-shrink-0"
+  >
+    <img
+      class="object-cover h-full w-full group-hover:scale-105 transition duration-500"
+      src="http://localhost:1313/blog/12-prototype-and-class/thumbnail_hu_e2e8e38895d6e70e.png"
+      alt="thumbnail.png"
+      width="320"
+      height="180"
+      loading="lazy"
+    />
+  </figure>
+
+  
+  <div class="basis-2/3 self-center ml-4">
+    <h3
+      class="font-bold text-sm leading-tight line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors pointer-events-none"
+    >
+      Prototype, Class và Kế thừa: JavaScript thực sự hoạt động như thế nào?
+    </h3>
+    <time class="text-xs text-gray-500 font-medium pointer-events-none">
+      Sep 03, 2025
+    </time>
+  </div>
+</article>
+
+<article
+  class="relative group flex flex-row items-center mb-4 hover:bg-gray-50 p-2 rounded-xl transition"
+>
+  
+  <a
+    class="absolute inset-0 z-10"
+    href="http://localhost:1313/blog/11-javascript-logic-errors/"
+    aria-label="Lỗi logic trong JavaScript: Khi code chạy đúng mà sai"
+  ></a>
+
+  
+  <figure
+    class="w-32 aspect-video overflow-hidden rounded-2xl bg-zinc-100 flex-shrink-0"
+  >
+    <img
+      class="object-cover h-full w-full group-hover:scale-105 transition duration-500"
+      src="http://localhost:1313/blog/11-javascript-logic-errors/thumbnail_hu_9e10f372155d68be.png"
+      alt="thumbnail.png"
+      width="320"
+      height="180"
+      loading="lazy"
+    />
+  </figure>
+
+  
+  <div class="basis-2/3 self-center ml-4">
+    <h3
+      class="font-bold text-sm leading-tight line-clamp-2 mb-1 group-hover:text-blue-600 transition-colors pointer-events-none"
+    >
+      Lỗi logic trong JavaScript: Khi code chạy đúng mà sai
+    </h3>
+    <time class="text-xs text-gray-500 font-medium pointer-events-none">
+      Sep 02, 2025
+    </time>
+  </div>
+</article>
+
+    </div>
+  </div>
+
+  
+  
+</div>
+</aside>
+</div>
+
+</main>
+    <footer class="bg-zinc-100 py-10 md:py-14"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+  <div class="flex flex-wrap space-y-6 mb-4">
+    <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
+      <a class="flex items-center group" href="http://localhost:1313/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="mr-2 group-hover:animate-spin"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+          <path
+            d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"
+          />
+        </svg>
+
+        <span class="text-2xl font-semibold uppercase">HiuLab</span>
+      </a>
+
+      <p class="font-semibold">
+        AI Security Researcher | HUTECH K22<br />
+        Học, chia sẻ và bảo vệ thế giới số bằng công nghệ AI.
+      </p>
+
+      <p>
+        Blog cá nhân của <strong>Tiết Thanh Minh Hiếu</strong> – nơi tôi ghi lại
+        hành trình từ sinh viên CNTT đến AI Security Researcher. Tại đây, tôi
+        chia sẻ kiến thức về AI, Cybersecurity và lập trình một cách dễ hiểu,
+        gần gũi và thực tế nhất.
+      </p>
+    </div>
+
+    <div class="self-center flex flex-col w-full md:w-2/5">
+      
+<ul id="social-media" class="flex items-center space-x-4">
+  <li>
+    <a
+      class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2"
+      href="https://www.facebook.com/thanhieu.pir"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+        />
+      </svg>
+    </a>
+  </li>
+  
+  <li>
+    <a
+      class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2"
+      href="mailto:thanhhieutiet@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M16 4.793c0-.82-.524-1.374-1.562-1.374H1.562C.524 3.419 0 3.973 0 4.793v6.414c0 .82.524 1.374 1.562 1.374h12.876c1.038 0 1.562-.554 1.562-1.374V4.793Zm-2 1.066L8 8.881l-6-3.022v-.066h12Z"
+        />
+      </svg>
+    </a>
+  </li>
+  <li>
+    <a
+      class="w-12 h-12 rounded-full bg-white hover:bg-zinc-200 flex items-center justify-center p-2"
+      href="https://www.github.com/thanhhieutiet"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="22"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+        />
+      </svg>
+    </a>
+  </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+  <div class="my-8">
+    <ul class="flex items-center space-x-4">
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/"
+          >Trang chủ</a
+        >
+      </li>
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/blog/"
+          >Bài viết</a
+        >
+      </li>
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/categories/"
+          >Danh mục</a
+        >
+      </li>
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/tags/"
+          >Thẻ</a
+        >
+      </li>
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/about/"
+          >Về tôi</a
+        >
+      </li>
+      
+      <li>
+        <a
+          class="decoration-auto hover:underline font-semibold"
+          href="/contact/"
+          >Liên hệ</a
+        >
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="border-t pt-4">
+    <p class="text-sm">
+      © 2025 Tiết Thanh Minh Hiếu. All rights reserved.<br />
+      Built with
+      <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> •
+      Powered by
+      <a href="https://insertapps.com/en/" target="_blank" rel="noopener"
+        >Insertapps</a
+      >.
+    </p>
+  </div>
+</div>
+</footer>
+      <script src="/js/insertoggle.js"></script>
+  </body>
+</html>

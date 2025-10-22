@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hoisting on HiuLab</title>
+    <link>http://localhost:1313/tags/hoisting/</link>
+    <description>Recent content in Hoisting on HiuLab</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Wed, 17 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hoisting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scope, Hoisting và Closure: Khi JavaScript &#39;ma thuật&#39; hơn bạn nghĩ</title>
+      <link>http://localhost:1313/blog/7-scope-hoisting-closure/</link>
+      <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/7-scope-hoisting-closure/</guid>
+      <description>&lt;p&gt;Chào mọi người!&lt;/p&gt;&#xA;&lt;p&gt;Nếu bạn từng học &lt;strong&gt;JavaScript Essentials 1 hoặc 2&lt;/strong&gt; của Cisco Academy, chắc hẳn đã gặp ba &amp;ldquo;từ khóa huyền thoại&amp;rdquo;: &lt;strong&gt;Scope&lt;/strong&gt;, &lt;strong&gt;Hoisting&lt;/strong&gt; và &lt;strong&gt;Closure&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
