@@ -82,6 +82,8 @@ Phát triển chuyên môn sâu về AI Security và chia sẻ kiến thức cho
 
 **Câu hỏi:** BERT có phát hiện mã độc tốt hơn CNN/LSTM?
 
+**[Full Implementation: BERT vs CNN/LSTM](https://github.com/thanhhieutiet/Android-Malware-Detection-BERT)** | +20% accuracy
+
 **Dataset:** MH-100K (100K mẫu)
 
 **Kết quả:**
