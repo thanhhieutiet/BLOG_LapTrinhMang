@@ -17,6 +17,12 @@ Trong 3 năm qua, tôi đã đi từ sinh viên CNTT thông thường đến Top
 
 ---
 
+## Download CV
+
+**[Tải CV (PDF)](CV_TietThanhMinhHieu_2025.pdf)** | Cập nhật: 10/2025
+
+---
+
 ## Tầm nhìn
 
 Phát triển chuyên môn sâu về AI Security và chia sẻ kiến thức cho cộng đồng. Tôi tin rằng cách học tốt nhất là dạy lại cho người khác - blog này là nơi tôi thực hành triết lý đó.
@@ -36,7 +42,10 @@ Phát triển chuyên môn sâu về AI Security và chia sẻ kiến thức cho
 
 **Chứng chỉ**
 
-- Hoàn thành: Networking Basics | JavaScript Essentials 1 & 2 (Cisco Academy)
+- [Networking Basics](NetworkingBasicsUpdate20251019-31-3prxg4.pdf) - Cisco Academy
+- [JavaScript Essentials 1](JavaScriptEssentials1Update20251019-31-k6qjp5.pdf) - Cisco Academy
+- [JavaScript Essentials 2](JavaScriptEssentials2Update20251019-33-8wl6vq.pdf) - Cisco Academy
+- [Coursera Certificate](Coursera_K2OJGL9FXKFD.pdf)
 - Đang theo học: Google Cybersecurity Certificate
 - Dự định: IBM Cybersecurity Analyst, CompTIA Security+
 

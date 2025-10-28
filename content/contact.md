@@ -20,6 +20,14 @@ Bạn có thể liên hệ với tôi qua các cách sau:
 
 ---
 
+## 💼 LinkedIn
+
+**[Tiết Thanh Minh Hiếu](https://www.linkedin.com/in/tiet-thanh-minh-hieu-860548294/)**
+
+Kết nối với tôi trên LinkedIn để trao đổi về nghề nghiệp, nghiên cứu và cơ hội hợp tác trong lĩnh vực an ninh mạng hoặc AI.
+
+---
+
 ## 💬 Facebook
 
 **[Tiết Thanh Minh Hiếu](https://www.facebook.com/thanhieu.pir)**
